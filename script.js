@@ -1,4 +1,4 @@
-var	mp = 1
+var	mpx = 1
 var	money = 0
 var multipliercost=10
 
@@ -7,15 +7,16 @@ setInterval('$("#counter").html(money * mp)',10)
 setInterval('$("#multiplier").html("Your current multiplier is " + mp + "x")',100)
 
 $(document).ready(function() {
+	$('#counter').html(money * mpx);
 	//var localMoney = localStorage.getItem("money");
 	//var localmp = localStorage.getItem("mp")
 	$('#moneycounter').click(function() {
         money++;
-        $('#counter').html(money * mp);
+        $('#counter').html(money * mpx);
 		//localStorage.setItem("money",money);
 		//localStorage.setItem("mp",mp);
 		if (money === 1) {
-		setTimeout('alert("You clicked "+(money*mp)+" times in 10 seconds!")',10000);
+		setTimeout('alert("You clicked "+(money*mpx)+" times in 10 seconds!")',10000);
 		setTimeout('money = 0',10000);
 	};
     });
