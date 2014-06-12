@@ -1,28 +1,20 @@
 //variables
-var stats = {
-
+var s = { //stats
+	oreoTotal: 0, //Total Oreos
+	mpx: 1,
+	rate: 1,
+	ops: a.add*mpx
 }
-var click = {
-
-}
-var auto = {
-
-}
-var mpx = 1;
-var	money = {
-	total:0, //Total money
-	add: 0, //How much money to add per second
-	rate:1, //default is 1, reduced if theres penalties
-	gain: mpx*this.rate, //the amount of Oreos gained per click 
-	ops:this.add*mpx //Automatic oreos per second
+var a = { //automatic
+	add:0
 }
 setInterval(updateLayout,10);
 //functions
 function updateLayout () {
 	money.total+=add;
-	$('#oreosTotal').html(money.total+" Oreos");
-	$('#mpx').html("Your multiplier is "+mpx+"!");
-	$('#ops').html("You are currently earning "+money.ops+" Oreos per second!");
+	$('#oreosTotal').html(s.oreoTotal+" Oreos");
+	$('#mpx').html("Your multiplier is "+s.mpx+"!");
+	$('#ops').html("You are currently earning "+s.ops+" Oreos per second!");
 }
 function updateStats () {
 	
@@ -33,7 +25,7 @@ setInterval('updateStats',1000)
 //jQuery code
 $(document).ready(function(){
 $('#clicker').click(function() {
-	money.total+=money.gain;
+	money.total+=(s.mpx*s.rate); //adds money by clicking.
 })})
 
 /*
