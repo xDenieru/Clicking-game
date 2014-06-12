@@ -1,0 +1,25 @@
+html {
+	border-style:outset;
+	border-width:10px;
+	border-color:green;
+}
+
+.body {
+	border-radius: 10px;
+	border: 3px solid red;
+}
+
+.vertical-align {
+	vertical-align: middle;
+	font-size:30px;
+}
+
+#moneycounter {
+    font-size:30px;
+    font-family: Garamond, Times, Serif;
+}
+
+#buymp {
+    font-size:30px;
+    font-family: Garamond, Times, Serif;
+}
