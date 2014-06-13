@@ -1,3 +1,5 @@
 Clicking-game
 =============
-To-be-edited.
+Alpha 1.0
+- Completely rewrote old code
+- 
